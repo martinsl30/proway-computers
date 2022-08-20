@@ -1,8 +1,8 @@
 <section class="product-list">
-    <!--*ngFor="let produto of produtos Diretiva para exibir a lista de produtos no browser-->
+    
     <div class="product-list__card" *ngFor="let produto of produtos">
         <a routerLink="/produtos/{{ produto.id }}" class="product-list__link">
-            <!--Alterando o src para [src] pois trata-se de um vetor/ adicionando o endereco dessa lista-->
+            
             <img [src]="produto.imagem">
             <h2 class="product-item__name">
                 {{ produto.descricao }}

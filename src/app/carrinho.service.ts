@@ -15,12 +15,13 @@ obtemCarrinho() {
   return this.itens;
    
 }
+//Obteremos as informaçoes do localStorage e precisamos salvar no momento da adicao ao carrinho
+/*Salvando a lista de produtos dentro do localStorage | passaremos os produtos o setItem recebe chave e valor,
+   mas o valor é uma string entao o stringify vai converter de objeto para objeto */
+
 
 adicionarAoCarrinho(produto: IProdutoCarrinho) {
-  //Obteremos as informaçoes do localStorage e precisamos salvar no momento da adicao ao carrinho
   this.itens.push(produto);
-  /*Salvando a lista de produtos dentro do localStorage | passaremos os produtos o setItem recebe chave e valor,
-   mas o valor é uma string entao o stringify vai converter de objeto para objeto */
   localStorage.setItem("carrinho", JSON.stringify(this.itens));
 }
 
